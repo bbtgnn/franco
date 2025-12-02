@@ -1,0 +1,15 @@
+{
+  "name": "@bbtgnn/franco",
+  "version": "0.1.0",
+  "license": "MIT",
+  "exports": "./mod.ts",
+  "publish": {
+    "include": ["mod.ts", "README.md", "LICENSE"],
+    "exclude": ["**/*.test.ts", "**/*.spec.ts"]
+  },
+  "imports": {
+    "@typescript-eslint/types": "npm:@typescript-eslint/types@^8.48.1",
+    "@typescript-eslint/utils": "npm:@typescript-eslint/utils@^8.48.1",
+    "type-fest": "npm:type-fest@^5.3.0"
+  }
+}
