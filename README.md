@@ -19,8 +19,7 @@ A type-safe, command-pattern-based state machine implementation for TypeScript w
 
 ### States
 
-States represent the different conditions your application can be in. Each state must have an `id` property and can optionally contain additional data.
-
+States represent the different conditions your application can be in.
 ```typescript
 type MyStates = {
   idle: void;
@@ -31,7 +30,7 @@ type MyStates = {
 
 ### Messages
 
-Messages are events that trigger state transitions. Like states, they must have an `id` property and can contain payload data. The state machine automatically includes `undo` and `redo` messages.
+Messages are events that trigger state transitions.  The state machine requires to include `undo` and `redo` messages.
 
 ```typescript
 type MyMessages = {
@@ -39,7 +38,8 @@ type MyMessages = {
   deactivate: void;
   disable: { reason: string };
   enable: void;
-  // undo and redo are automatically included
+  undo: void;
+  redo: void
 };
 ```
 
